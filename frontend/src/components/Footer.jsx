@@ -26,8 +26,12 @@ const Footer = () => {
 
                 {/* Brand & Copyright */}
                 <div className="text-center md:text-left">
-                    <h2 className="text-2xl font-bold text-white mb-2">Growth<span className="text-indigo-500">Agency</span></h2>
-                    <p className="text-sm">© {new Date().getFullYear()} GrowthAgency. All rights reserved.</p>
+                    <h2 className="text-2xl font-bold text-white mb-2">My Brand <span className="text-indigo-500">Growth</span></h2>
+                    <p className="text-sm">© 2026 My Brand Growth. All rights reserved.</p>
+                    <div className="flex gap-4 mt-2 text-xs text-slate-500">
+                        <a href="#" className="hover:text-slate-300 transition-colors">Privacy Policy</a>
+                        <a href="#" className="hover:text-slate-300 transition-colors">Terms & Conditions</a>
+                    </div>
                 </div>
 
                 {/* Contact Info */}

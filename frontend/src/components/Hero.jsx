@@ -59,7 +59,7 @@ const Hero = () => {
 
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden bg-white text-slate-900 selection:bg-indigo-100 pt-20">
-            {/* Background Gradients (Softer for Light Mode) */}
+            {/* Background Gradients */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
                 <div className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-indigo-100 rounded-full blur-3xl mix-blend-multiply opacity-70"></div>
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-fuchsia-100 rounded-full blur-3xl mix-blend-multiply opacity-70"></div>
@@ -71,8 +71,8 @@ const Hero = () => {
                 <div className="w-full lg:w-1/2 flex flex-col items-start text-left z-10">
                     {/* Trust Micro-Line */}
                     <div ref={trustRef} className="mb-6 opacity-0">
-                        <span className="inline-block py-1.5 px-4 rounded-full bg-slate-50 border border-slate-200 text-sm font-medium text-slate-500">
-                            Trusted by ambitious brands ready to scale.
+                        <span className="inline-block py-1.5 px-4 rounded-full bg-indigo-50 border border-indigo-100 text-sm font-medium text-indigo-600">
+                            Trusted by 50+ ambitious brands.
                         </span>
                     </div>
 
@@ -85,7 +85,7 @@ const Hero = () => {
 
                     {/* Subheadline */}
                     <p ref={subheadlineRef} className="opacity-0 max-w-xl text-lg lg:text-xl text-slate-600 mb-10 leading-relaxed">
-                        We help growth-focused businesses attract high-quality traffic, convert more customers, and build powerful digital brands using data-driven marketing strategies that deliver real, measurable results.
+                        We help growth-focused businesses generate qualified leads, increase conversions, and build powerful digital brands using data-driven marketing strategies.
                     </p>
 
                     {/* CTAs */}
@@ -97,6 +97,10 @@ const Hero = () => {
                             </a>
                             <span className="mt-2 text-xs text-slate-400 font-medium ml-2">No obligation. Just actionable insights.</span>
                         </div>
+
+                        <a href="#services" className="px-8 py-4 bg-transparent border border-slate-200 text-slate-700 text-lg font-semibold rounded-full hover:bg-slate-50 hover:border-slate-300 transition-colors w-full sm:w-auto text-center">
+                            See How We Grow Brands
+                        </a>
                     </div>
                 </div>
 

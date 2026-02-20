@@ -75,20 +75,20 @@ const HowItWorks = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
+        <section ref={sectionRef} className="py-24 bg-slate-950 relative overflow-hidden">
             {/* Background Decorative Blob */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] bg-indigo-50/50 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] bg-indigo-500/20 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
             <div className="container mx-auto px-6">
                 {/* Header */}
                 <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-20 opacity-0">
-                    <span className="inline-block py-1 px-3 mb-4 rounded-full bg-fuchsia-50 border border-fuchsia-100 text-xs font-bold text-fuchsia-600 tracking-wider uppercase">
+                    <span className="inline-block py-1 px-3 mb-4 rounded-full bg-fuchsia-500/10 border border-fuchsia-500/20 text-xs font-bold text-fuchsia-400 tracking-wider uppercase">
                         Process
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-                        📈 Our Growth Process Is <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-fuchsia-600">Simple & Effective</span>
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                        📈 Our Growth Process Is <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-fuchsia-400">Simple & Effective</span>
                     </h2>
-                    <p className="text-lg text-slate-600">
+                    <p className="text-lg text-slate-400">
                         We’ve streamlined our approach to deliver maximum impact in minimum time.
                     </p>
                 </div>
@@ -97,29 +97,29 @@ const HowItWorks = () => {
                 <div ref={stepsRef} className="relative grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
 
                     {/* Connecting Line (Desktop) */}
-                    <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-indigo-100 via-fuchsia-100 to-indigo-100 -z-10"></div>
+                    <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-indigo-500/30 via-fuchsia-500/30 to-indigo-500/30 -z-10"></div>
 
                     {steps.map((step, index) => (
                         <div key={index} className="relative flex flex-col items-center text-center opacity-0 group">
 
                             {/* Icon Circle */}
-                            <div className={`w-24 h-24 rounded-full bg-white border-4 border-slate-50 shadow-xl shadow-indigo-100 flex items-center justify-center mb-8 relative z-10 transition-transform duration-500 group-hover:scale-110`}>
-                                <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.colors} opacity-90 transition-opacity duration-300`}></div>
+                            <div className={`w-24 h-24 rounded-full bg-slate-900 border-4 border-slate-800 shadow-xl shadow-indigo-500/20 flex items-center justify-center mb-8 relative z-10 transition-transform duration-500 group-hover:scale-110`}>
+                                <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.colors} opacity-20 group-hover:opacity-40 transition-opacity duration-300`}></div>
                                 <div className="relative z-10">
                                     {step.icon}
                                 </div>
 
                                 {/* Number Badge */}
-                                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center text-sm font-bold border-2 border-white">
+                                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-sm font-bold border-2 border-slate-900">
                                     {step.number}
                                 </div>
                             </div>
 
                             {/* Content */}
-                            <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-indigo-900 transition-colors">
+                            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors">
                                 {step.title}
                             </h3>
-                            <p className="text-slate-600 leading-relaxed max-w-xs mx-auto">
+                            <p className="text-slate-400 leading-relaxed max-w-xs mx-auto">
                                 {step.description}
                             </p>
                         </div>
@@ -128,7 +128,7 @@ const HowItWorks = () => {
 
                 {/* Footer Tagline */}
                 <div className="text-center mt-16 animate-fade-in-up delay-700">
-                    <p className="text-sm font-bold tracking-[0.2em] text-slate-400 uppercase">
+                    <p className="text-sm font-bold tracking-[0.2em] text-slate-500 uppercase">
                         Simple. Transparent. Results-focused.
                     </p>
                 </div>
@@ -137,5 +137,4 @@ const HowItWorks = () => {
         </section>
     );
 };
-
 export default HowItWorks;

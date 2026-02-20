@@ -90,27 +90,26 @@ const WhyChooseUs = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 bg-slate-50 relative overflow-hidden">
+        <section ref={sectionRef} className="py-24 bg-slate-950 relative overflow-hidden">
             {/* Background Decorations */}
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#4f4f4f2e_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
 
             <div className="container mx-auto px-6 relative z-10">
 
                 {/* Header */}
                 <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-16 opacity-0">
-                    <span className="inline-block py-1 px-3 mb-4 rounded-full bg-slate-100 border border-slate-200 text-xs font-bold text-slate-600 tracking-wider uppercase">
-                        Why Choose Us?
+                    <span className="inline-block py-1 px-3 mb-4 rounded-full bg-slate-900 border border-slate-700 text-xs font-bold text-slate-400 tracking-wider uppercase">
+                        We Don't Just Run Ads
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-                        We Don't Just Run Ads. <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-fuchsia-600">We Engineer Growth.</span>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-fuchsia-400">We Engineer Growth.</span>
                     </h2>
                 </div>
 
                 {/* Features Grid */}
                 <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                     {features.map((feature, index) => (
-                        <div key={index} className="flex items-start bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 opacity-0 group">
+                        <div key={index} className="flex items-start bg-slate-900/50 backdrop-blur-sm p-6 rounded-xl border border-slate-800 shadow-sm hover:border-indigo-500/50 hover:shadow-indigo-500/10 transition-all duration-300 opacity-0 group">
 
                             {/* Icon */}
                             <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center shrink-0 mr-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -119,10 +118,10 @@ const WhyChooseUs = () => {
 
                             {/* Content */}
                             <div>
-                                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-indigo-700 transition-colors">
+                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
                                     {feature.title}
                                 </h3>
-                                <p className="text-slate-600 text-sm leading-relaxed">
+                                <p className="text-slate-400 text-sm leading-relaxed">
                                     {feature.description}
                                 </p>
                             </div>

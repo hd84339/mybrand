@@ -22,10 +22,10 @@ const Contact = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 bg-slate-900 relative overflow-hidden text-white">
+        <section ref={sectionRef} className="py-24 bg-slate-950 relative overflow-hidden text-white">
             {/* Background Gradients */}
-            <div className="absolute top-0 right-0 w-[50rem] h-[50rem] bg-indigo-900/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-[40rem] h-[40rem] bg-fuchsia-900/20 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-[50rem] h-[50rem] bg-indigo-500/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[40rem] h-[40rem] bg-fuchsia-500/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
             <div ref={containerRef} className="container mx-auto px-6 opacity-0">
                 <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
@@ -65,7 +65,7 @@ const Contact = () => {
                         </div>
 
                         {/* Trust Badge */}
-                        <div className="mt-12 flex items-center gap-4 text-slate-500 text-sm font-medium">
+                        <div className="mt-12 flex items-center gap-4 text-slate-400 text-sm font-medium">
                             <div className="flex -space-x-2">
                                 <img className="w-8 h-8 rounded-full border-2 border-slate-900" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" alt="User" />
                                 <img className="w-8 h-8 rounded-full border-2 border-slate-900" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100" alt="User" />
@@ -77,32 +77,32 @@ const Contact = () => {
 
                     {/* Right Col: Form */}
                     <div className="w-full lg:w-1/2">
-                        <div className="bg-white rounded-2xl p-8 md:p-10 shadow-2xl shadow-indigo-500/10">
+                        <div className="bg-slate-900 p-8 md:p-10 rounded-2xl border border-slate-800 shadow-2xl shadow-indigo-500/10">
                             <form className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-slate-900 ml-1">Name <span className="text-red-500">*</span></label>
-                                        <input type="text" placeholder="John Doe" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all text-slate-900 placeholder:text-slate-400" required />
+                                        <label className="text-sm font-bold text-white ml-1">Name <span className="text-red-500">*</span></label>
+                                        <input type="text" placeholder="John Doe" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-none transition-all text-white placeholder:text-slate-500" required />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-slate-900 ml-1">Phone</label>
-                                        <input type="tel" placeholder="+1 (555) 000-0000" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all text-slate-900 placeholder:text-slate-400" />
+                                        <label className="text-sm font-bold text-white ml-1">Phone</label>
+                                        <input type="tel" placeholder="+1 (555) 000-0000" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-none transition-all text-white placeholder:text-slate-500" />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-slate-900 ml-1">Email <span className="text-red-500">*</span></label>
-                                    <input type="email" placeholder="john@company.com" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all text-slate-900 placeholder:text-slate-400" required />
+                                    <label className="text-sm font-bold text-white ml-1">Email <span className="text-red-500">*</span></label>
+                                    <input type="email" placeholder="john@company.com" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-none transition-all text-white placeholder:text-slate-500" required />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-slate-900 ml-1">Website URL</label>
-                                    <input type="url" placeholder="https://yourwebsite.com" className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all text-slate-900 placeholder:text-slate-400" />
+                                    <label className="text-sm font-bold text-white ml-1">Website URL</label>
+                                    <input type="url" placeholder="https://yourwebsite.com" className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-none transition-all text-white placeholder:text-slate-500" />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-slate-900 ml-1">Message</label>
-                                    <textarea rows="4" placeholder="Tell us about your business goals..." className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all text-slate-900 placeholder:text-slate-400 resize-none"></textarea>
+                                    <label className="text-sm font-bold text-white ml-1">Message</label>
+                                    <textarea rows="4" placeholder="Tell us about your business goals..." className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-none transition-all text-white placeholder:text-slate-500 resize-none"></textarea>
                                 </div>
 
                                 <button type="submit" className="w-full py-4 bg-gradient-to-r from-indigo-600 to-fuchsia-600 text-white font-bold text-lg rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-[1.02] transition-all transform duration-200 relative overflow-hidden group">

@@ -21,7 +21,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer ref={footerRef} className="bg-slate-900 border-t border-slate-800 py-12 text-slate-400 opacity-0">
+        <footer ref={footerRef} className="bg-slate-950 border-t border-slate-900 py-12 text-slate-400 opacity-0">
             <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
 
                 {/* Brand & Copyright */}

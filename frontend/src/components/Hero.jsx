@@ -6,7 +6,7 @@ const Hero = () => {
     const subheadlineRef = useRef(null);
     const ctaRef = useRef(null);
     const trustRef = useRef(null);
-    const visualRef = useRef(null);
+
 
     const [showModal, setShowModal] = useState(false);
 
@@ -48,89 +48,67 @@ const Hero = () => {
                 { opacity: 0, y: 20 },
                 { opacity: 1, y: 0, duration: 0.6 },
                 "-=0.4"
-            )
-            .fromTo(visualRef.current,
-                { opacity: 0, x: 50, scale: 0.95 },
-                { opacity: 1, x: 0, scale: 1, duration: 1.2, ease: 'power2.out' },
-                "-=0.8"
             );
 
     }, []);
 
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-white text-slate-900 selection:bg-indigo-100 pt-20">
-            {/* Background Gradients */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-indigo-100 rounded-full blur-3xl mix-blend-multiply opacity-70"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-fuchsia-100 rounded-full blur-3xl mix-blend-multiply opacity-70"></div>
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 text-white selection:bg-indigo-500 selection:text-white pt-20">
+
+            {/* Modern Background Effects */}
+            <div className="absolute inset-0 w-full h-full bg-slate-950">
+                <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
             </div>
 
-            <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+                <div className="absolute top-[-10%] left-1/4 w-[500px] h-[500px] bg-indigo-500/30 rounded-full blur-[100px] mix-blend-screen animate-pulse-slow"></div>
+                <div className="absolute bottom-[-10%] right-1/4 w-[500px] h-[500px] bg-fuchsia-500/30 rounded-full blur-[100px] mix-blend-screen animate-pulse-slow delay-1000"></div>
+                <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] mix-blend-screen"></div>
+            </div>
 
-                {/* Left Column: Text Content */}
-                <div className="w-full lg:w-1/2 flex flex-col items-start text-left z-10">
+            <div className="container mx-auto px-6 flex flex-col items-center justify-center pt-12 pb-24 text-center">
+
+                {/* Content Container */}
+                <div className="w-full max-w-4xl flex flex-col items-center z-10">
                     {/* Trust Micro-Line */}
-                    <div ref={trustRef} className="mb-6 opacity-0">
-                        <span className="inline-block py-1.5 px-4 rounded-full bg-indigo-50 border border-indigo-100 text-sm font-medium text-indigo-600">
-                            Trusted by 50+ ambitious brands.
-                        </span>
+                    <div ref={trustRef} className="mb-8 opacity-0">
+                        <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-slate-900/50 border border-slate-700 backdrop-blur-sm shadow-lg shadow-indigo-500/10 hover:border-indigo-500/50 transition-colors duration-300">
+                            <span className="flex h-2 w-2 relative">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                            </span>
+                            <span className="text-sm font-medium text-slate-300">
+                                Trusted by <span className="text-white font-semibold">50+ ambitious brands</span>
+                            </span>
+                        </div>
                     </div>
 
                     {/* Headline */}
-                    <h1 ref={headlineRef} className="opacity-0 text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-slate-900">
-                        <span className="bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">Scale Your Brand.</span> <br />
-                        <span className="bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-indigo-600 bg-clip-text text-transparent">Multiply Your Leads.</span> <br />
-                        <span className="bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">Dominate Your Market.</span>
+                    <h1 ref={headlineRef} className="opacity-0 text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] mb-8 text-white drop-shadow-2xl">
+                        Scale Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Brand</span>. <br className="hidden md:block" />
+                        Dominate <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">The Market</span>.
                     </h1>
 
                     {/* Subheadline */}
-                    <p ref={subheadlineRef} className="opacity-0 max-w-xl text-lg lg:text-xl text-slate-600 mb-10 leading-relaxed">
-                        We help growth-focused businesses generate qualified leads, increase conversions, and build powerful digital brands using data-driven marketing strategies.
+                    <p ref={subheadlineRef} className="opacity-0 max-w-2xl text-lg md:text-xl text-slate-300 mb-12 leading-relaxed mx-auto font-light">
+                        Unlock explosive growth with data-driven strategies designed for <span className="text-indigo-300 font-semibold">ambitious businesses</span> ready to lead.
                     </p>
 
                     {/* CTAs */}
-                    <div ref={ctaRef} className="opacity-0 flex flex-col sm:flex-row items-center gap-4">
-                        <div className="flex flex-col items-start w-full sm:w-auto">
-                            <a href={`tel:${phoneNumber}`} onClick={handleCall} className="group relative px-8 py-4 bg-slate-900 text-white text-lg font-bold rounded-full transition-transform hover:scale-105 hover:shadow-xl shadow-slate-900/20 w-full sm:w-auto text-center inline-block cursor-pointer">
-                                Get Your Free Growth Strategy Call
-                                <span className="absolute inset-0 rounded-full ring-2 ring-white/10 transition-all group-hover:ring-white/30"></span>
+                    <div ref={ctaRef} className="opacity-0 flex flex-col sm:flex-row items-center justify-center gap-6 w-full">
+                        <div className="flex flex-col items-center w-full sm:w-auto group">
+                            <a href={`tel:${phoneNumber}`} onClick={handleCall} className="relative px-8 py-4 bg-white text-slate-950 text-lg font-bold rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 overflow-hidden">
+                                <span className="relative z-10">Get Free Strategy Call</span>
+                                <svg className="w-5 h-5 relative z-10 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                <div className="absolute inset-0 bg-gradient-to-r from-indigo-50 via-white to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </a>
-                            <span className="mt-2 text-xs text-slate-400 font-medium ml-2">No obligation. Just actionable insights.</span>
+                            <span className="mt-3 text-xs text-slate-400 font-medium tracking-wide">✨ No obligation. 100% Free.</span>
                         </div>
 
-                        <a href="#services" className="px-8 py-4 bg-transparent border border-slate-200 text-slate-700 text-lg font-semibold rounded-full hover:bg-slate-50 hover:border-slate-300 transition-colors w-full sm:w-auto text-center">
-                            See How We Grow Brands
+                        <a href="#services" className="group px-8 py-4 bg-slate-900 border border-slate-700 text-white text-lg font-semibold rounded-full hover:bg-slate-800 hover:border-indigo-500/50 transition-all duration-300 w-full sm:w-auto text-center shadow-lg shadow-black/20 flex items-center justify-center gap-2">
+                            <span>Explore Our Work</span>
+                            <span className="text-indigo-400 group-hover:translate-x-1 transition-transform">↓</span>
                         </a>
-                    </div>
-                </div>
-
-                {/* Right Column: Visuals */}
-                <div ref={visualRef} className="w-full lg:w-1/2 opacity-0 relative flex justify-center lg:justify-end">
-                    <div className="relative w-full max-w-lg lg:max-w-xl">
-                        <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-fuchsia-500 rounded-xl blur-2xl opacity-30 animate-pulse-slow"></div>
-                        <div className="relative rounded-2xl shadow-2xl overflow-hidden transform rotate-[-2deg] hover:rotate-0 transition-transform duration-700 ease-out border-4 border-white/50">
-                            <img
-                                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
-                                alt="Analytics Dashboard"
-                                className="w-full h-auto object-cover"
-                            />
-                            {/* Glass Overlay Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/10 to-transparent mix-blend-overlay"></div>
-                        </div>
-
-                        {/* Floating Icons/Elements */}
-                        <div className="absolute -top-12 -right-8 w-20 h-20 bg-white rounded-2xl shadow-xl shadow-indigo-500/20 border border-slate-100 flex items-center justify-center animate-bounce-slow z-20">
-                            <span className="text-4xl filter drop-shadow-sm">🚀</span>
-                        </div>
-                        <div className="absolute -bottom-10 -left-10 bg-white px-6 py-4 rounded-2xl shadow-xl shadow-fuchsia-500/20 border border-slate-100 flex items-center gap-4 animate-pulse-slow z-20">
-                            <div className="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                            </div>
-                            <div>
-                                <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">Growth</div>
-                                <div className="text-2xl text-slate-900 font-black">+125%</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 

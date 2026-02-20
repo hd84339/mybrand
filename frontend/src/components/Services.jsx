@@ -102,21 +102,21 @@ const Services = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 bg-slate-50 relative overflow-hidden">
+        <section ref={sectionRef} className="py-24 bg-slate-950 relative overflow-hidden">
             {/* Background Decorative Lines */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
             <div className="container mx-auto px-6 relative z-10">
 
                 {/* Header */}
                 <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-20 opacity-0">
-                    <span className="inline-block py-1 px-3 mb-4 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-bold text-indigo-600 tracking-wider uppercase">
+                    <span className="inline-block py-1 px-3 mb-4 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-bold text-indigo-400 tracking-wider uppercase">
                         Expertise
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-                        💼 Our Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-fuchsia-600">Services</span>
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                        💼 Our Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-fuchsia-400">Services</span>
                     </h2>
-                    <p className="text-lg text-slate-600">
+                    <p className="text-lg text-slate-400">
                         Comprehensive digital solutions tailored to scale your business.
                     </p>
                 </div>
@@ -124,21 +124,21 @@ const Services = () => {
                 {/* Services Grid */}
                 <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
-                        <div key={index} className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-2xl hover:shadow-indigo-100/50 hover:-translate-y-2 transition-all duration-300 opacity-0 flex flex-col items-start relative overflow-hidden">
+                        <div key={index} className="group bg-slate-900/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900/80 hover:shadow-2xl hover:shadow-indigo-500/20 hover:-translate-y-2 transition-all duration-300 opacity-0 flex flex-col items-start relative overflow-hidden">
 
                             {/* Accent Top Line */}
                             <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${service.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
 
                             {/* Icon */}
-                            <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                            <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/20 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                                 {service.icon}
                             </div>
 
                             {/* Content */}
-                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-700 transition-colors">
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
                                 {service.title}
                             </h3>
-                            <p className="text-slate-600 leading-relaxed">
+                            <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
                                 {service.description}
                             </p>
                         </div>

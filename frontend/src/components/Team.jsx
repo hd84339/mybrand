@@ -6,11 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const teamMembers = [
     {
-        name: "Arjun Sharma",
-        role: "Founder & CEO",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop"
-    },
-    {
         name: "Priya Nair",
         role: "Head of Marketing",
         image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop"
@@ -80,7 +75,7 @@ const Team = () => {
                 </div>
 
                 {/* Team Grid */}
-                <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {teamMembers.map((member, index) => (
                         <div key={index} className="group relative opacity-0">
                             {/* Image Container with fixed height as requested */}
@@ -91,6 +86,8 @@ const Team = () => {
                                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                                 />
 
+
+                              
                                 {/* Overlay Gradient */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
 
